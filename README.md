@@ -1,6 +1,5 @@
 <!--
   README.md — Moiz Saif | Project Manager & Certified Scrum Master
-  Tip: Add your PDF resume to the repo and link it below as ./Moiz_Saif_Resume.pdf
 -->
 
 <h1 align="center">Moiz Saif</h1>
@@ -17,7 +16,7 @@
 </p>
 
 <div align="center">
-  <a href="./Moiz_Saif_Resume.pdf">📄 Download PDF</a> •
+  <a href="./resume.pdf">📄 Download PDF</a> •
   <a href="#-work-experience">Work Experience</a> •
   <a href="#-skills">Skills</a> •
   <a href="#-projects">Projects</a> •
