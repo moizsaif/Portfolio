@@ -144,9 +144,4 @@ Project Manager with 6+ years of experience leading Agile and hybrid delivery ac
 
 ---
 
-### How to Use This README
-- Keep this README as your **profile repo** (`<your-username>/<your-username>`) or place it in a dedicated **resume repo**.
-- Add your latest **PDF resume** to the repo and update the link above.
-- Optional: Pin this repo on your GitHub profile for visibility.
 
-> _“Make it simple. Make it useful. Ship value iteratively.”_
