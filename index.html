@@ -4,7 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Moiz Saif — Resume</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
   <style>
     :root {
       --accent:#0f62fe;
@@ -59,7 +65,9 @@
       border-radius:50%; 
       object-fit:cover; 
       border:3px solid var(--accent); 
+      transition:transform .3s;
     }
+    .profile img:hover { transform: scale(1.05); }
 
     h1 { margin:0; font-size:22px; }
     h2 { margin:3px 0; font-size:15px; font-weight:500; color:var(--muted); }
@@ -132,12 +140,13 @@
 
     /* Timeline for experience */
     .timeline { 
-      border-left:3px solid #d3d3d3; /* light grey */
+      border-left:3px solid #d3d3d3; 
       padding-left:20px; 
     }
     .timeline-item { 
       margin-bottom:24px; 
       position:relative; 
+      opacity:0;
     }
     .timeline-item::before { 
       content:""; 
@@ -147,17 +156,17 @@
       width:12px; 
       height:12px; 
       border-radius:50%; 
-      background:#d3d3d3; /* light grey */
+      background:#d3d3d3; 
     }
     .timeline-item h3 { margin:0; font-size:15px; font-weight:600; }
     .timeline-item span { font-size:13px; color:var(--muted); }
     .timeline-item ul { margin:8px 0; padding-left:18px; line-height:1.5; }
 
     /* Skills Infographics */
-    .skill-bar { margin-bottom:16px; }
+    .skill-bar { margin-bottom:16px; opacity:0; }
     .skill-label { font-size:13px; margin-bottom:6px; display:flex; justify-content:space-between; }
     .bar { height:8px; background:#e5e7eb; border-radius:8px; overflow:hidden; }
-    .bar-fill { height:100%; background:var(--accent); }
+    .bar-fill { height:100%; background:var(--accent); transition: width 1.2s ease-in-out; }
 
     aside { font-size:14px; }
 
@@ -176,111 +185,121 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="profile">
-        <img src="profile.jpg" alt="Moiz Saif">
-        <div>
-          <h1>Moiz Saif</h1>
-          <h2>Technical Project Manager • Certified Scrum Master</h2>
-          <div style="font-size:13px; color:var(--muted);">SaaS • FinTech • ERP • API Integrations • Vaasa, Finland</div>
-          <!-- Button group -->
-          <div class="btn-group">
-            <a href="resume.pdf" class="btn" download>📄 Resume</a>
-            <a href="https://www.linkedin.com/in/moiz-saif" class="btn" target="_blank">🔗 LinkedIn</a>
-            <a href="https://github.com/moizsaif" class="btn" target="_blank">💻 GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="contact">
-        <h2>Contact</h2>
-        <div class="contact-item">
-          <img src="email-icon.png" alt="Email">
-          <a href="mailto:Abdulmoizsaif1@gmail.com">Abdulmoizsaif1@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <img src="phone-icon.png" alt="Phone">
-          <a href="tel:+358414985825">+358 41 498 5825</a>
-        </div>
-      </div>
-    </header>
 
-    <main>
+<div class="container">
+  <header data-aos="fade-down">
+    <div class="profile">
+      <img src="profile.jpg" alt="Moiz Saif">
       <div>
-        <section>
-          <div class="section-title">Summary</div>
-          <p>Technical Project Manager & Certified Scrum Master with 6+ years of experience in delivering SaaS, API, ERP, and FinTech projects. Skilled in Agile ceremonies, Jira workflow automation, cross-functional alignment, and delivering outcomes in global distributed environments.</p>
-        </section>
-
-        <section>
-          <div class="section-title">Experience</div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h3>Project Manager — i2c Inc.</h3>
-              <span>2022–2025</span>
-              <ul>
-                <li>Delivered 40+ SaaS/API/ERP projects across North America, LATAM, and MENA.</li>
-                <li>Facilitated sprint planning, retrospectives, and release planning workshops.</li>
-                <li>Built Jira dashboards and automation improving SLA compliance by 30%.</li>
-              </ul>
-            </div>
-            <div class="timeline-item">
-              <h3>Project Coordinator — Techverx</h3>
-              <span>2021–2022</span>
-              <ul>
-                <li>Supported Agile delivery for healthcare & e-commerce SaaS solutions.</li>
-              </ul>
-            </div>
-            <div class="timeline-item">
-              <h3>Project Coordinator — Dynexcel</h3>
-              <span>2020–2021</span>
-              <ul>
-                <li>Delivered ERP & POS integrations with Odoo ERP platform.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <h1>Moiz Saif</h1>
+        <h2>Technical Project Manager • Certified Scrum Master</h2>
+        <div style="font-size:13px; color:var(--muted);">SaaS • FinTech • ERP • API Integrations • Vaasa, Finland</div>
+        <div class="btn-group">
+          <a href="resume.pdf" class="btn" download>📄 Resume</a>
+          <a href="https://www.linkedin.com/in/moiz-saif" class="btn" target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/moizsaif" class="btn" target="_blank">💻 GitHub</a>
+        </div>
       </div>
+    </div>
+    <div class="contact" data-aos="fade-left">
+      <h2>Contact</h2>
+      <div class="contact-item">
+        <img src="email-icon.png" alt="Email">
+        <a href="mailto:Abdulmoizsaif1@gmail.com">Abdulmoizsaif1@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <img src="phone-icon.png" alt="Phone">
+        <a href="tel:+358414985825">+358 41 498 5825</a>
+      </div>
+    </div>
+  </header>
 
-      <aside>
-        <section>
-          <div class="section-title">Skills</div>
-          <div class="skill-bar">
-            <div class="skill-label"><span>Agile / Scrum</span><span>90%</span></div>
-            <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-label"><span>Jira & Confluence</span><span>85%</span></div>
-            <div class="bar"><div class="bar-fill" style="width:85%"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-label"><span>Workflow Automation</span><span>80%</span></div>
-            <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-label"><span>REST APIs</span><span>75%</span></div>
-            <div class="bar"><div class="bar-fill" style="width:75%"></div></div>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-label"><span>Smartsheet / MS Project</span><span>70%</span></div>
-            <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
-          </div>
-        </section>
+  <main>
+    <div>
+      <section data-aos="fade-up">
+        <div class="section-title">Summary</div>
+        <p>Technical Project Manager & Certified Scrum Master with 6+ years of experience in delivering SaaS, API, ERP, and FinTech projects. Skilled in Agile ceremonies, Jira workflow automation, cross-functional alignment, and delivering outcomes in global distributed environments.</p>
+      </section>
 
-        <section>
-          <div class="section-title">Certifications</div>
-          <ul>
-            <li>Certified Scrum Master (2025)</li>
-            <li>Lean Six Sigma (2023)</li>
-            <li>Google Project Management (2023)</li>
-          </ul>
-        </section>
-      </aside>
-    </main>
+      <section data-aos="fade-up" data-aos-delay="100">
+        <div class="section-title">Experience</div>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="150">
+            <h3>Project Manager — i2c Inc.</h3>
+            <span>2022–2025</span>
+            <ul>
+              <li>Delivered 40+ SaaS/API/ERP projects across North America, LATAM, and MENA.</li>
+              <li>Facilitated sprint planning, retrospectives, and release planning workshops.</li>
+              <li>Built Jira dashboards and automation improving SLA compliance by 30%.</li>
+            </ul>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <h3>Project Coordinator — Techverx</h3>
+            <span>2021–2022</span>
+            <ul>
+              <li>Supported Agile delivery for healthcare & e-commerce SaaS solutions.</li>
+            </ul>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="250">
+            <h3>Project Coordinator — Dynexcel</h3>
+            <span>2020–2021</span>
+            <ul>
+              <li>Delivered ERP & POS integrations with Odoo ERP platform.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
 
-    <footer>
-      © 2025 Moiz Saif — Hosted on GitHub Pages
-    </footer>
-  </div>
+    <aside>
+      <section data-aos="fade-left">
+        <div class="section-title">Skills</div>
+        <div class="skill-bar" data-aos="fade-left" data-aos-delay="100">
+          <div class="skill-label"><span>Agile / Scrum</span><span>90%</span></div>
+          <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-bar" data-aos="fade-left" data-aos-delay="150">
+          <div class="skill-label"><span>Jira & Confluence</span><span>85%</span></div>
+          <div class="bar"><div class="bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-bar" data-aos="fade-left" data-aos-delay="200">
+          <div class="skill-label"><span>Workflow Automation</span><span>80%</span></div>
+          <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-bar" data-aos="fade-left" data-aos-delay="250">
+          <div class="skill-label"><span>REST APIs</span><span>75%</span></div>
+          <div class="bar"><div class="bar-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar" data-aos="fade-left" data-aos-delay="300">
+          <div class="skill-label"><span>Smartsheet / MS Project</span><span>70%</span></div>
+          <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+        </div>
+      </section>
+
+      <section data-aos="fade-left" data-aos-delay="350">
+        <div class="section-title">Certifications</div>
+        <ul>
+          <li>Certified Scrum Master (2025)</li>
+          <li>Lean Six Sigma (2023)</li>
+          <li>Google Project Management (2023)</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer data-aos="fade-up">
+    © 2025 Moiz Saif — Hosted on GitHub Pages
+  </footer>
+</div>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
 </body>
 </html>
