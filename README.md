@@ -27,7 +27,7 @@
 ---
 
 ## 👋 About Me
-Project Manager with 6+ years of experience leading Agile and hybrid delivery across SaaS, FinTech, ERP, and banking. I facilitate engaging ceremonies and workshops, apply servant-leadership to build psychologically safe, high-trust teams, and automate delivery reporting with Jira/Smartsheet to keep stakeholders aligned. I thrive on Kaizen—continuously improving processes, flow efficiency, and business outcomes at scale.
+Project Manager with 6+ years of experience leading Agile and hybrid delivery across SaaS, FinTech, ERP, and banking. I facilitate engaging ceremonies and workshops, apply servant-leadership to build psychologically safe, high-trust teams, and automate delivery reporting with Jira/Smartsheet to keep stakeholders aligned. I thrive on Kaizen continuously improving processes, flow efficiency, and business outcomes at scale.
 
 ---
 
