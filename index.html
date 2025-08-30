@@ -138,15 +138,22 @@
       margin-bottom:12px; 
     }
 
-    /* Timeline for experience */
-    .timeline { 
-      border-left:3px solid #d3d3d3; 
-      padding-left:20px; 
+   /* Timeline for experience */
+  .timeline { 
+    border-left:3px solid #d3d3d3; 
+    padding-left:30px; /* increased padding from 20px -> 30px */
     }
-    .timeline-item { 
-      margin-bottom:24px; 
-      position:relative; 
-      opacity:0;
+
+  .timeline-item::before { 
+    content:""; 
+    position:absolute; 
+    left:-16px; /* move dot slightly left */
+    top:7px; 
+    width:8px;  /* smaller dot */
+    height:8px; 
+    border-radius:50%; 
+    background:#d3d3d3; 
+    }
     }
     .timeline-item::before { 
       content:""; 
