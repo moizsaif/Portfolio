@@ -138,33 +138,29 @@
       margin-bottom:12px; 
     }
 
-   /* Timeline for experience */
-  .timeline { 
-    border-left:3px solid #d3d3d3; 
-    padding-left:30px; /* increased padding from 20px -> 30px */
+    /* Timeline for experience */
+    .timeline { 
+      border-left:3px solid #d3d3d3; 
+      padding-left:40px; /* more space from the line */
+      position: relative;
     }
-
-  .timeline-item::before { 
-    content:""; 
-    position:absolute; 
-    left:-16px; /* move dot slightly left */
-    top:7px; 
-    width:8px;  /* smaller dot */
-    height:8px; 
-    border-radius:50%; 
-    background:#d3d3d3; 
+    
+    .timeline-item { 
+      margin-bottom:24px; 
+      position: relative; 
     }
-    }
+    
     .timeline-item::before { 
       content:""; 
       position:absolute; 
-      left:-10px; 
-      top:5px; 
-      width:12px; 
-      height:12px; 
+      left:-18px; /* move dot further left */
+      top:10px; /* vertical center */
+      width:10px; /* smaller dot */
+      height:10px; 
       border-radius:50%; 
       background:#d3d3d3; 
     }
+
     .timeline-item h3 { margin:0; font-size:15px; font-weight:600; }
     .timeline-item span { font-size:13px; color:var(--muted); }
     .timeline-item ul { margin:8px 0; padding-left:18px; line-height:1.5; }
